@@ -5,7 +5,9 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+],
   purge: {
     content: ["./src/**/*.svelte"],
     enabled: production,
