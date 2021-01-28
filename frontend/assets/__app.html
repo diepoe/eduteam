@@ -15,9 +15,17 @@
 	<link rel="modulepreload" href="/build/main.js" />
 
 	<script type="module" src="/build/main.js"></script>
+	<script>
+		// this is the script which controlls the dark mode
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  			document.querySelector('html').classList.add('dark');
+		} else {
+  			document.querySelector('html').classList.remove('dark');
+		}
+	</script>
 </head>
 
-<body>
+<body class="dark:bg-gray-800">
 	<noscript>Please enable Javascript for best experience.</noscript>
 </body>
 </html>

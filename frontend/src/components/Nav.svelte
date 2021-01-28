@@ -15,14 +15,19 @@
   let hide = "true";
 
   let menuItems = [
-    { link: ".", name: "Home" },
-    { link: "https://github.com/HAUDRAUFHAUN/eduteam", name: "GitHub" },
+    { link: ".", name: "Home", rel: "prerender", target: "_self" },
+    {
+      link: "https://github.com/HAUDRAUFHAUN/eduteam",
+      name: "GitHub",
+      rel: "noopener",
+      target: "_blank",
+    },
   ];
 </script>
 
 <div class="max-w-full mx-auto">
   <div
-    class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-8 md:pb-10 lg:max-w-full lg:w-full lg:pb-14 xl:pb-16"
+    class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12"
   >
     <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
       <nav
@@ -34,6 +39,8 @@
         >
           {#each menuItems as item}
             <a
+              rel={item.rel}
+              target={item.target}
               href={item.link}
               class="font-medium text-indigo-500 hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
               >{item.name}</a

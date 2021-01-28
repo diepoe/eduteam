@@ -8,7 +8,9 @@
 </script>
 
 <Nav />
-<main class="mx-5 my-4 px-5 py-1">
+<main
+  class="dark:bg-gray-800 dark:text-white p-4 m-4 md:mx-11 md:px-11 box relative  max-w-full min-h-screen"
+>
   <slot />
 </main>
 <Footer />
