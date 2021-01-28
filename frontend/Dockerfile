@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-alpine
 RUN apk add --no-cache git
 
 RUN mkdir /code
