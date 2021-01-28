@@ -7,7 +7,9 @@
   let code = "";
 </script>
 
-<h1 class="text-3xl font-medium">eduteam</h1>
+<h1 class="text-3xl font-medium">Eduteam</h1>
+ 
+
 <div class="flex justify-center align-middle mt-4 p-4 md:p-6 md:mt-8 space-x-2">
   <input
     id="codeinput"
