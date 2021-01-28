@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  frontend:
+    container_name: awesome
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - 5000:5000
+    command: npm run dev

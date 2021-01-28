@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "eduteam-frontend",
   "version": "1.0.0",
   "@comments scripts": {
     "dev": "develop with blazing fast rebuilds",
@@ -54,11 +54,7 @@
     "extensions": "svelte,html,svx,md"
   },
   "spassr": {},
-  "spank": {
-    "blacklist": [
-      "/example/modal/basic/4"
-    ]
-  },
+  "spank": {},
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0"
