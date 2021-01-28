@@ -2,15 +2,14 @@
   let isDark = false;
   function setTheme() {
     if (localStorage.theme === "dark") {
-      isDark = false;
       localStorage.theme = "light";
       window.location.reload(true);
-    } else {
-      isDark = true;
+      isDark = false;
+    } else 
       localStorage.theme = "dark";
       window.location.reload(true);
+      isDark = true;
     }
-  }
 
   let hide = "true";
 

@@ -7,6 +7,7 @@ module.exports = {
     purgeLayersByDefault: true,
   },
   plugins: [
+    require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
 ],
   purge: {
