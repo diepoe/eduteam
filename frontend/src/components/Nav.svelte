@@ -24,11 +24,11 @@
   ];
 </script>
 
-<div class="max-w-full mx-auto">
+<div class="max-w-full mx-auto focus-within ">
   <div
-    class="relative z-10 pb-2 bg-white dark:bg-gray-800 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12"
+    class="relative z-10 pb-2 bg-blue-500 dark:bg-gray-800 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12s"
   >
-    <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+    <div class="relative pt-2 px-4 sm:px-6 lg:px-8">
       <nav
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
@@ -41,7 +41,7 @@
               rel={item.rel}
               target={item.target}
               href={item.link}
-              class="font-medium text-indigo-500 hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
+              class="font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
               >{item.name}</a
             >
           {/each}
