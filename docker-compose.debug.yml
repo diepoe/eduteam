@@ -18,3 +18,24 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
+
+  api:
+    container_name: graphql-api
+    build:
+      context: ./backend/
+    volumes:
+      - ./backend/:/code/
+    ports:
+      - 4000:4000
+    command: node index.js
+
+  frontend:
+    container_name: svelte
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend/:/code
+    ports:
+      - 5000:5000
+    command: npm run dev
