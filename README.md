@@ -10,9 +10,9 @@ Eduteam enables contactless collaboration from anywhere.
 Anyone can create a group and collaborate with others. 
 
 ## developer setup
-To get this project up and running on your machine ensure that you hav installed:
+To get this project up and running on your machine ensure that you have installed:
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
-    - [docker-compose](https://docs.docker.com/compose/install/)
+    - [docker-compose](https://docs.docker.com/compose/install/) (comes with docker desktop)
 - [Node Js](https://nodejs.org/en/)
 
 First you have to clone the project
