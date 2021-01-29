@@ -5,16 +5,15 @@
       localStorage.theme = "light";
       window.location.reload(true);
       isDark = false;
-    } else 
-      localStorage.theme = "dark";
-      window.location.reload(true);
-      isDark = true;
-    }
+    } else localStorage.theme = "dark";
+    window.location.reload(true);
+    isDark = true;
+  }
 
   let hide = "true";
 
   let menuItems = [
-    { link: ".", name: "Home", rel: "prerender", target: "_self" },
+    { link: "/", name: "Home", rel: "prerender", target: "_self" },
     {
       link: "https://github.com/HAUDRAUFHAUN/eduteam",
       name: "GitHub",
