@@ -20,7 +20,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
 
   api:
-    container_name: graphql-api
+    container_name: api
     build:
       context: ./backend/
     volumes:

@@ -15,7 +15,7 @@ const typeDefs = gql`
         id: ID!
         code: String!
   description: String!
-  contributions: [Contribution!]!
+  contributions: [Contribution]
     }
 
     type Query {
