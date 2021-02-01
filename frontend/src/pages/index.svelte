@@ -8,7 +8,6 @@
 </script>
 
 <h1 class="text-3xl font-medium">Eduteam</h1>
- 
 
 <div class="flex justify-center align-middle mt-4 p-4 md:p-6 md:mt-8 space-x-2">
   <input
@@ -17,7 +16,7 @@
     maxlength="6"
     bind:value={code}
     placeholder="Enter your code..."
-    class="w-3/5 m-1 self-center transform duration-300 rounded-xl border-indigo-500 border-2 focus:scale-y-110 focus:border-8 focus:border-yellow-500 focus:ring-transparent hover:border-yellow-400 dark:bg-gray-700"
+    class="w-3/5 m-1 self-center transform scale-95 duration-300 rounded-xl border-indigo-500 border-2 focus:scale-100 focus:border-8 focus:border-yellow-500 focus:ring-transparent hover:border-yellow-400 dark:bg-gray-700"
   />
   <a
     href="/session/{code}"
