@@ -57,6 +57,8 @@
   "spank": {},
   "dependencies": {
     "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.0"
+    "@tailwindcss/typography": "^0.4.0",
+    "apollo-boost": "^0.4.9",
+    "svelte-apollo": "^0.4.0"
   }
 }
