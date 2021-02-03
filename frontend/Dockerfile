@@ -6,7 +6,7 @@ WORKDIR /code
 
 
 COPY ["package.json", "package-lock.json*", "/code/"]
-RUN npm install
+RUN npm install --no-optional
 
 COPY . /code/
 
