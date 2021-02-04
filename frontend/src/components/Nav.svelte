@@ -48,33 +48,24 @@
             class="right-0 absolute p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
             on:click={() => setTheme()}
           >
-            {#if isDark}
-              <svg
-                class="h-7 w-7"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-                />
-              </svg>
-            {:else}
-              <svg
-                class="h-7 w-7"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                />
-              </svg>
-            {/if}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-7 w-7"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6.8 11a6 6 0 1 0 10.396 0l-5.197 -8l-5.2 8z" />
+              <path d="M12 3v17" />
+              <path d="M12 12l3.544 -3.544" />
+              <path d="M12 17.3l5.558 -5.558" />
+            </svg>
           </button>
         </div>
       </nav>
