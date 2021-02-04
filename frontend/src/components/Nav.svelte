@@ -25,7 +25,7 @@
 
 <div class="max-w-full mx-auto focus-within ">
   <div
-    class="relative z-10 pb-2 bg-blue-500 dark:bg-gray-800 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12s"
+    class="relative z-10 pb-2 bg-indigo-500 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12s"
   >
     <div class="relative pt-2 px-4 sm:px-6 lg:px-8">
       <nav
