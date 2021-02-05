@@ -5,10 +5,10 @@
 
 
 <div class="text-black dark:text-white">
-    <div class="container">
-        <p class="text-4xl">Impressum</p>
+    <div class="container prose">
+        <h1>Impressum</h1>
         <br>
-        <p class="subtitle is-2">Angaben gemäß § 5 TMG</p>
+        <h2>Angaben gemäß § 5 TMG</h2>
         <br>
         <strong>Verantwortlich</strong>
         <p>Moritz Kelle</p>
@@ -23,7 +23,7 @@
         <p>Email:</p><a href= "mailto:contact@eduteam.de">contact@eduteam.de</a>
         <p>Telefon: 05822 987654</p>
         <br><br>
-        <p class="subtitle is-2">Copyright </p>
+        <h2>Copyright </h2>
         <strong>© Copyright {year} – Urheberrechtshinweis</strong>
         <br><br>
         <p>Alle Inhalte dieses Internetangebotes, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet,</p><a href="#Lizenzen">(Lizenzen)</a><p>bei Moritz Kelle und Dietrich Poensgen. Bitte fragen Sie uns, falls Sie die Inhalte dieses Internetangebotes verwenden möchten.</p>
@@ -32,7 +32,7 @@
         <br>
         <p>Wer gegen das Urheberrecht verstößt (z.B. Bilder oder Texte unerlaubt kopiert), macht sich gem. §§ 106 ff UrhG strafbar, wird zudem kostenpflichtig abgemahnt und muss Schadensersatz leisten (§ 97 UrhG).</p>
         <br><br>
-        <p class="subtitle is-2">Rechtliches</p>
+        <h2>Rechtliches</h2>
         <strong> Haftung für Inhalte</strong>
         <br>
         <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
@@ -51,14 +51,14 @@
         <br><br>
         
         <section id="Lizenzen">
-            <p class="subtitle is-2">Lizenzen</p>
+            <h2>Lizenzen</h2>
             <br>
-            <p class="subtitle is-3">Icons</p>
-            <p>Alle in diesem Internet Angebot verwendetem Icons stammen  von</p><strong>„Ionicons“</strong><a href="https://ionicons.com/">(https://ionicons.com/)</a>   
+            <h3>Icons</3>
+            <p>Alle in diesem Internet Angebot verwendetem Icons stammen von</p><strong>„Tabler Icons“</strong><a href="https://tabler-icons.io/">Tabler Icons</a>   
             <br><br>
             <strong>Released under MIT License</strong>
             <br><br>
-            <strong>Copyright (c) 2020 IONIC</strong>
+            <strong>Copyright (c) 2021 codecalm.net</strong>
             <br>
             <p>
                 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -68,8 +68,8 @@
                 The Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the Software.
             </p>
             <br><br>
-            <p class="subtitle is-3">CSS Framework</p>
-            <p>Als CSS Framework verwenden wir</p><strong>„Tailwind“</strong><a href="https://tailwindcss.com/" class="text-blue-500">(Hier gehts zu tailwindcss)</a>   
+            <h3>CSS Framework</h3>
+            <p>Als CSS Framework verwenden wir <a href="https://tailwindcss.com/"><strong>„Tailwind“</strong></a>  </p> 
         </section>  
 
     </div> 
