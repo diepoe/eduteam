@@ -8,17 +8,16 @@
     <h1 class="dark:text-white">Impressum</h1>
     <h2 class="dark:text-white">Angaben gemäß § 5 TMG</h2>
     <h4 class="dark:text-white">Verantwortlich</h4>
-    <p>Moritz Kelle</p>
-    <p>Dietrich Poensgen</p>
-    <br />
+    <p>somepeople</p>
     <h4 class="dark:text-white">Kontaktdaten</h4>
-    <p>Eduteam GMBH</p>
-    <p>Mustermann Straße 34</p>
-    <p>29524 Musterhausen</p>
+    <p>
+      somename<br /> Mustermann Straße 34<br />
+      29524 Musterhausen
+    </p>
 
     <h4 class="dark:text-white">Email:</h4>
     <a href="mailto:contact@eduteam.de" class="dark:text-white"
-      >contact@eduteam.de</a
+      >contact@domain.de</a
     >
     <br />
     <h2 class="dark:text-white">Copyright</h2>
@@ -26,12 +25,16 @@
     <p>
       Alle Inhalte dieses Internetangebotes, insbesondere Texte, Fotografien und
       Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt, soweit
-      nicht ausdrücklich anders gekennzeichnet,
-    </p>
-    <a href="#Lizenzen" class="dark:text-white">(Lizenzen)</a>
-    <p>
-      bei Moritz Kelle und Dietrich Poensgen. Bitte fragen Sie uns, falls Sie
-      die Inhalte dieses Internetangebotes verwenden möchten.
+      nicht ausdrücklich anders gekennzeichnet
+
+      <a href="#Lizenzen" class="dark:text-white">(Lizenzen)</a>, bei
+      <a
+        href="https://github.com/HAUDRAUFHAUN/eduteam/graphs/contributors"
+        target="_blank"
+        rel="noopener"
+        class="dark:text-white">diesen Leuten</a
+      >. Bitte fragen Sie uns, falls Sie die Inhalte dieses Internetangebotes
+      verwenden möchten.
     </p>
 
     <p>
@@ -48,7 +51,6 @@
     <br />
     <h2 class="dark:text-white">Rechtliches</h2>
     <h4 class="dark:text-white">Haftung für Inhalte</h4>
-
     <p>
       Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die
       Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch
@@ -105,15 +107,14 @@
     <br />
     <section id="Lizenzen">
       <h2 class="dark:text-white">Lizenzen</h2>
-      <br />
       <h3 class="dark:text-white">Icons</h3>
-      <p>Alle in diesem Internet Angebot verwendetem Icons stammen von</p>
-      <h4 class="dark:text-white">„Tabler Icons“</h4>
-      <a class="dark:text-white" href="https://tabler-icons.io/">Tabler Icons</a
-      >
-      <br /><br />
+      <p>
+        Alle in diesem Internet Angebot verwendetem Icons stammen von <a
+          class="dark:text-white"
+          href="https://tabler-icons.io/">Tabler Icons</a
+        >
+      </p>
       <h4 class="dark:text-white">Released under MIT License</h4>
-      <br /><br />
       <h4 class="dark:text-white">&copy; {year} codecalm.net</h4>
       <br />
       <p>
@@ -135,7 +136,7 @@
         whether in an action of contract, tort or otherwise, arising from, out of
         or in connection with the software or the use or other dealings in the Software.
       </p>
-      <br /><br />
+      <br />
       <h3 class="dark:text-white">CSS Framework</h3>
       <p>
         Als CSS Framework verwenden wir <a
