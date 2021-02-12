@@ -19,6 +19,7 @@ const typeDefs = gql`
     }
 
     type Query {
+        getSession(code: String!): Session!
         getSessions: [Session!]
         getContributions(sessionID: String!): [Contribution!]
     }
@@ -31,6 +32,8 @@ const typeDefs = gql`
 
 const resolvers = {
     Query: {
+        
+        getSession: async (_, args) => await Session.findOne({code: args.code}).exec(),
         getSessions: async () => await Session.find({}).exec(),
         getContributions: async () => await Contribution.find({}).exec()
     },
