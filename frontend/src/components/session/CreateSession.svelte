@@ -1,6 +1,9 @@
 <script>
+  import { url } from "@roxi/routify";
   import { mutation } from "svelte-apollo";
   import { gql } from "apollo-boost";
+
+  import QrCode from "svelte-qrcode";
 
   const ADDSESSION = gql`
     mutation($description: String!, $randStr: String!) {
@@ -19,6 +22,9 @@
     try {
       const randStr = Math.random().toString(20).substr(2, 6);
       await addSession({ variables: { description, randStr } });
+
+      $: qrurl = $url("/session/" + randStr);
+      return qrurl
     } catch (error) {
       console.log(error);
     }
@@ -43,7 +49,10 @@
 {#await handleSubmit}
   <p>Creating session...</p>
 {:then data}
-  <p>{JSON.stringify(data)}</p>
+  <p class="text-green-500">Created session</p>
+  <br>
+  <QrCode value={data.qrurl} />
+  <br>
 {:catch error}
   <p>Error: {error}</p>
 {/await}
