@@ -1,3 +1,4 @@
+// config of mongodb models
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 

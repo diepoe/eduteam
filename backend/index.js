@@ -1,9 +1,9 @@
-const express  = require('express');
+const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 require('./config');
 
 const { Contribution, Session } = require('./models');
-  
+
 const typeDefs = gql`
     type Contribution {
         author: String!
@@ -32,8 +32,8 @@ const typeDefs = gql`
 
 const resolvers = {
     Query: {
-        
-        getSession: async (_, args) => await Session.findOne({code: args.code}).exec(),
+
+        getSession: async (_, args) => await Session.findOne({ code: args.code }).exec(),
         getSessions: async () => await Session.find({}).exec(),
         getContributions: async () => await Contribution.find({}).exec()
     },
@@ -42,7 +42,7 @@ const resolvers = {
             try {
                 let response = await Session.create(args);
                 return response;
-            } catch(e) {
+            } catch (e) {
                 return e.message;
             }
         },
@@ -50,7 +50,7 @@ const resolvers = {
             try {
                 let response = await Contribution.create(args);
                 return response;
-            } catch(e) {
+            } catch (e) {
                 return e.message;
             }
         }
@@ -61,6 +61,6 @@ const server = new ApolloServer({ typeDefs, resolvers });
 const app = express();
 server.applyMiddleware({ app });
 
-app.listen({ port: 4000 }, () =>
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-);
+app.listen({ port: process.env.PORT || 4000 }, () => {
+    console.log(`🚀 Server is ready`);
+});
