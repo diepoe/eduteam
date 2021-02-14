@@ -5,7 +5,9 @@
   import ApolloClient from "apollo-boost";
   import { setClient } from "svelte-apollo";
 
-  const client = new ApolloClient({ uri: "http://localhost:4000/graphql" });
+  const client = new ApolloClient({
+    uri: process.env.API_URL || "http://localhost:4000/graphql",
+  });
   setClient(client);
 </script>
 
