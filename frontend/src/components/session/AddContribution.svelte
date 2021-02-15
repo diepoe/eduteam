@@ -30,17 +30,17 @@
 
 <form
   on:submit|preventDefault={handleSubmit}
-  class="flex flex-col w-3/5 justify-center"
+  class="place-items-center flex flex-col "
 >
   <input
     type="text"
     bind:value={author}
     placeholder="Your name"
-    class="self-start w-full m-1 transform scale-100 duration-300 rounded-md border-indigo-500 border-3 focus:border-8 hover:border-indigo-600 focus:scale-105 dark:bg-gray-700 dark:text-white"
+    class="place-content-center w-2/3  m-1 transform scale-100 duration-300 rounded-md border-indigo-500 border-3 focus:border-8 hover:border-indigo-600 focus:scale-105 dark:bg-gray-700 dark:text-white"
   />
   <br />
   <markdown-toolbar
-    class="mt-4 mb-2 flex flex-row p-2 border-solid border-2 border-gry-900 rounded-md"
+    class="place-content-center mt-4 mb-2 flex flex-row p-2 border-solid border-2 border-gry-900 rounded-md"
     for="contribution-content"
   >
     <md-bold class="p-2 rounded hover:bg-gray-200"><Icon name="bold" /></md-bold
@@ -74,7 +74,7 @@
   <textarea
     bind:value={content}
     id="contribution-content"
-    class="rounded-md"
+    class="rounded-md w-2/3 "
     cols="30"
     rows="10"
   />
@@ -82,8 +82,8 @@
   <button
     method="submit"
     placeholder="Your Contribution"
-    class="self-start transformsss duration-300 p-3 my-2 md:my-4 lg:my-6 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 hover:scale-110 text-white rounded-xl"
-  >
+    class="text-center flex flex-row  transformsss duration-300 p-3 my-2 md:my-4 lg:my-6 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 hover:scale-110 text-white rounded-xl"
+    ><Icon name="plus" />
     Add your Contribution
   </button>
 </form>

@@ -25,7 +25,7 @@
 {:then data}
   {#if data.loading == false}
     {#if data.error}
-      <div class="flex flex-row">
+      <div class="flex flex-row my-3">
         <Icon name="alert" />
         <p class=" text-red-600 font-bold text-xl">Something wen't wrong</p>
       </div>

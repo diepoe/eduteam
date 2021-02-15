@@ -106,13 +106,14 @@
     {
       box: "24 24",
       name: "plus",
-      svg: `<path stroke="none" d="M0 0h24v24H0z" fill="none">
-  <circle cx="12" cy="12" r="9">
-  <line x1="9" y1="12" x2="15" y2="12">
-  <line x1="12" y1="9" x2="12" y2="15">`,
+      svg: `
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <circle cx="12" cy="12" r="9"></circle>
+  <line x1="9" y1="12" x2="15" y2="12"></line>
+  <line x1="12" y1="9" x2="12" y2="15"></line>`,
     },
     {
-      box: "20 20",
+      box: "24 24",
       name: "alert",
       svg: ` <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
    <path d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z"></path>
@@ -232,7 +233,7 @@
     fill: none;
   }
   svg.plus {
-    @apply text-gray-900;
+    @apply text-white;
     stroke-width: 2;
     stroke: currentColor;
     stroke-linecap: round;

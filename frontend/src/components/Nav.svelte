@@ -24,7 +24,7 @@
   ];
 </script>
 
-<div class="max-w-full mx-auto focus-within ">
+<div class="flex flex-row max-w-full mx-auto focus-within ">
   <div
     class="relative z-10 pb-2 bg-indigo-500 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12s"
   >
