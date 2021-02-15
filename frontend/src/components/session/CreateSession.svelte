@@ -24,14 +24,14 @@
       await addSession({ variables: { description, randStr } });
 
       $: qrurl = $url("/session/" + randStr);
-      return qrurl
+      return qrurl;
     } catch (error) {
       console.log(error);
     }
   }
 </script>
 
-<h2 class="text-xl">Create a new session</h2>
+<h2 class="text-center text-3xl">Create a new session</h2>
 
 <form on:submit|preventDefault={handleSubmit}>
   <input
@@ -50,9 +50,9 @@
   <p>Creating session...</p>
 {:then data}
   <p class="text-green-500">Created session</p>
-  <br>
+  <br />
   <QrCode value={data.qrurl} />
-  <br>
+  <br />
 {:catch error}
   <p>Error: {error}</p>
 {/await}
