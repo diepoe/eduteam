@@ -27,7 +27,7 @@ services:
       - ./backend/:/code/
     ports:
       - 4000:4000
-    command: node index.js
+    command: npm start
 
   frontend:
     container_name: svelte
