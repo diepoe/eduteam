@@ -9,6 +9,7 @@
     uri: process.env.API_URL || "http://localhost:4000/graphql",
   });
   setClient(client);
+  console.log(process.env.API_URL);
 </script>
 
 <Router {routes} />
