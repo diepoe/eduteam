@@ -32,7 +32,7 @@
   }
 </script>
 
-<h2 class="text-xl">Create a new session</h2>
+<h2 class="text-center text-3xl">Create a new session</h2>
 
 <form on:submit={handleSubmit}>
   <div class="flex flex-col justify-start">

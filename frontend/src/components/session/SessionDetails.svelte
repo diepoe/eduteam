@@ -3,6 +3,7 @@
   import { gql } from "apollo-boost";
 
   import { params } from "@roxi/routify";
+  import Icon from "../icons/Icon.svelte";
 
   const GETSESSION = gql`
     query($code: String!) {
@@ -18,13 +19,16 @@
   const sessions = query(GETSESSION, { variables: { code } });
 </script>
 
-<h2 class="text-xl">Session Details</h2>
+<h2 class="text-2xl ">Session Details:</h2>
 {#await $sessions}
   <p>Loading...</p>
 {:then data}
   {#if data.loading == false}
     {#if data.error}
-      <p>Something wen't wrong</p>
+      <div class="flex flex-row">
+        <Icon name="alert" />
+        <p class=" text-red-600 font-bold text-xl">Something wen't wrong</p>
+      </div>
     {:else if data != "undefinded"}
       <ul>
         <li>Description: {data.data.getSession.description}</li>

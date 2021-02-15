@@ -97,13 +97,36 @@
   <line x1="11" y1="12" x2="20" y2="12" />
   <line x1="11" y1="18" x2="20" y2="18" />`,
     },
+    {
+      box: "24 24",
+      name: "brand-github",
+      svg: ` <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"/>`,
+    },
+    {
+      box: "24 24",
+      name: "plus",
+      svg: `<path stroke="none" d="M0 0h24v24H0z" fill="none">
+  <circle cx="12" cy="12" r="9">
+  <line x1="9" y1="12" x2="15" y2="12">
+  <line x1="12" y1="9" x2="12" y2="15">`,
+    },
+    {
+      box: "20 20",
+      name: "alert",
+      svg: ` <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z"></path>
+   <line x1="12" y1="8" x2="12" y2="12"></line>
+   <line x1="12" y1="16" x2="12.01" y2="16"></line>`,
+    },
   ];
+
   let displayIcon = icons.find((e) => e.name === name);
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  class="svgicon {name}"
+  class="svgicon {name} dark:text-white"
   {width}
   {height}
   viewBox="0 0 {displayIcon.box}">{@html displayIcon.svg}</svg
@@ -194,6 +217,30 @@
   }
   svg.list-check {
     @apply text-gray-900;
+    stroke-width: 2;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  svg.brand-github {
+    color: #181717;
+    stroke-width: 2;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  svg.plus {
+    @apply text-gray-900;
+    stroke-width: 2;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  svg.alert {
+    @apply text-red-600;
     stroke-width: 2;
     stroke: currentColor;
     stroke-linecap: round;
