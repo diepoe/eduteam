@@ -114,8 +114,8 @@
           href="https://tabler-icons.io/">Tabler Icons</a
         >
       </p>
-      <h4 class="dark:text-white">Released under MIT License</h4>
-      <h4 class="dark:text-white">&copy; {year} codecalm.net</h4>
+      <h4 class="dark:text-white">Tabler Free is available under MIT License</h4>
+      <h4 class="dark:text-white">&copy;Copyright 2018 Tabler</h4>
       <br />
       <p>
         Permission is hereby granted, free of charge, to any person obtaining a
