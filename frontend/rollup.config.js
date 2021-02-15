@@ -70,11 +70,9 @@ export default {
           defaults: { style: "postcss" },
         }),
         replace({
-          process: JSON.stringify({
-            env: {
-              isProd: production,
-              ...config().parsed,
-            },
+          __ENV__: JSON.stringify({
+            isProd: production,
+            ...config().parsed,
           }),
         }),
       ],

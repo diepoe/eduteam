@@ -82,7 +82,7 @@
   <button
     method="submit"
     placeholder="Your Contribution"
-    class="self-start transformsss duration-300 p-3 my-2 md:my-4 lg:my-6 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 hover:scale-110 text-white rounded-xl"
+    class="self-start transform duration-300 p-3 my-2 md:my-4 lg:my-6 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 hover:scale-110 text-white rounded-xl"
   >
     Add your Contribution
   </button>
