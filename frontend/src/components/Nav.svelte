@@ -1,4 +1,5 @@
 <script>
+  import Icon from "@/components/icons/Icon.svelte";
   let isDark = false;
   function setTheme() {
     if (localStorage.theme === "dark") {
@@ -36,16 +37,27 @@
           class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
         >
           {#each menuItems as item}
-            <a
-              rel={item.rel}
-              target={item.target}
-              href={item.link}
-              class="font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
-              >{item.name}</a
-            >
+            {#if item.name === "GitHub"}
+              <a
+                rel={item.rel}
+                target={item.target}
+                href={item.link}
+                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
+              >
+                <Icon name="brand-github" />{item.name}</a
+              >
+            {:else}
+              <a
+                rel={item.rel}
+                target={item.target}
+                href={item.link}
+                class="font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
+                >{item.name}</a
+              >
+            {/if}
           {/each}
           <button
-            class="right-0 absolute p-1 rounded-lg text-gray-600 dark:text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+            class="right-0 absolute p-1 rounded-lg  text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
             on:click={() => setTheme()}
           >
             <svg

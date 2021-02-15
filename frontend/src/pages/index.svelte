@@ -1,5 +1,6 @@
 <script>
   import { metatags, url } from "@roxi/routify";
+  import Icon from "@/components/icons/Icon.svelte";
   metatags.title = "eduteam";
   metatags.description =
     "eduteam is a tool for teachers and students to collaborate on group work at their (homeschooling) lessons";
@@ -27,7 +28,7 @@
 </div>
 
 <br />
-
-<p>
+<Icon name="plus" />
+<p class="text-center text-3xl">
   Create your own session <a href="/session/create" class="underline">here</a>
 </p>
