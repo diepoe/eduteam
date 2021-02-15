@@ -58,6 +58,12 @@ export default {
     chunkFileNames: `[name]${(production && "-[hash]") || ""}.js`,
   },
   plugins: [
+    replace({
+      __ENV__: JSON.stringify({
+        isProd: production,
+        ...config().parsed,
+      }),
+    }),
     alias({ entries: [{ find: "@", replacement: "./src" }] }),
     svelte({
       dev: !production, // run-time checks
@@ -68,12 +74,6 @@ export default {
         autoPreprocess({
           postcss: require("./postcss.config.js"),
           defaults: { style: "postcss" },
-        }),
-        replace({
-          __ENV__: JSON.stringify({
-            isProd: production,
-            ...config().parsed,
-          }),
         }),
       ],
     }),
