@@ -26,38 +26,38 @@
 
 <div class=" max-w-full mx-auto focus-within ">
   <div
-    class="relative z-10 pb-2 bg-indigo-500 sm:pb-6 md:pb-8 lg:max-w-full lg:w-full lg:pb-10 xl:pb-12s"
+    class="relative z-10 pb-2 bg-indigo-500 sm:py-4 md:py-6 lg:max-w-full lg:w-full "
   >
     <div class="relative pt-2 px-4 sm:px-6 lg:px-8">
       <nav
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
       >
-        <div
-          class="hidden md:block lg:block xl:block md:ml-10 md:pr-4 md:space-x-8"
-        >
+        <div class="hidden md:flex md:ml-10 md:pr-4 md:space-x-8">
           {#each menuItems as item}
             {#if item.name === "GitHub"}
               <a
                 rel={item.rel}
                 target={item.target}
                 href={item.link}
-                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
+                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-2 rounded-md"
               >
-                <Icon name="brand-github" />{item.name}</a
+                <span class="icon-wrapper"
+                  ><Icon name="brand-github" />{item.name}</span
+                ></a
               >
             {:else}
               <a
                 rel={item.rel}
                 target={item.target}
                 href={item.link}
-                class="font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-3 rounded-md"
+                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-2 rounded-md"
                 >{item.name}</a
               >
             {/if}
           {/each}
           <button
-            class="right-0 absolute p-1 rounded-lg  text-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 fill-current"
+            class="right-0 absolute p-1 rounded-lg  text-gray-50 hover:bg-gray-100 hover:text-gray-900 fill-current"
             on:click={() => setTheme()}
           >
             <svg

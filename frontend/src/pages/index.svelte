@@ -29,5 +29,6 @@
 
 <br />
 <p class="text-center text-3xl">
+  <Icon name="plus" />
   Create your own session <a href="/session/create" class="underline">here</a>
 </p>
