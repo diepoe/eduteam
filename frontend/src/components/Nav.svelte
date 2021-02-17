@@ -1,14 +1,18 @@
 <script>
   import Icon from "@/components/icons/Icon.svelte";
-  let isDark = false;
+  import { darkTheme } from "@/stores/stores.js";
+
   function setTheme() {
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-      window.location.reload(true);
-      isDark = false;
-    } else localStorage.theme = "dark";
-    window.location.reload(true);
-    isDark = true;
+    try {
+      darkTheme.update((n) => !n);
+      if ($darkTheme) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   let hide = "true";
