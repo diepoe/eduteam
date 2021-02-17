@@ -38,4 +38,4 @@ services:
       - ./frontend/:/code
     ports:
       - 5000:5000
-    command: npm run dev
+    command: npm run dev:ssr
