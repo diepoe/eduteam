@@ -114,10 +114,10 @@
     {
       box: "24 24",
       name: "alert",
-      svg: ` <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      svg: `<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
    <path d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z"></path>
    <line x1="12" y1="8" x2="12" y2="12"></line>
-   <line x1="12" y1="16" x2="12.01" y2="16"></line>`,
+   <line x1="12" y1="16" x2="12.01" y2="16"></line> `,
     },
     {
       box: "24 24",
@@ -126,6 +126,12 @@
   <path d="M8.7 3h6.6c.3 0 .5 .1 .7 .3l4.7 4.7c.2 .2 .3 .4 .3 .7v6.6c0 .3 -.1 .5 -.3 .7l-4.7 4.7c-.2 .2 -.4 .3 -.7 .3h-6.6c-.3 0 -.5 -.1 -.7 -.3l-4.7 -4.7c-.2 -.2 -.3 -.4 -.3 -.7v-6.6c0 -.3 .1 -.5 .3 -.7l4.7 -4.7c.2 -.2 .4 -.3 .7 -.3z"></path>
   <line x1="12" y1="8" x2="12" y2="12"></line>
   <line x1="12" y1="16" x2="12.01" y2="16"></line> `,
+    },
+    {
+      box: "24 24",
+      name: "go.back",
+      svg: `<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1"></path>`,
     },
   ];
 
@@ -249,6 +255,14 @@
   }
   svg.alert {
     @apply text-red-600;
+    stroke-width: 2;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  svg.go.back {
+    @apply text-white;
     stroke-width: 2;
     stroke: currentColor;
     stroke-linecap: round;
