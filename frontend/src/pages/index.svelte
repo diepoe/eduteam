@@ -17,7 +17,7 @@
     maxlength="6"
     bind:value={code}
     placeholder="Enter your code..."
-    class="w-3/5 m-1 self-center duration-300 rounded-xl border-indigo-500 border-3 focus:border-8 hover:border-indigo-600 dark:bg-gray-700"
+    class="w-3/5 m-2 self-center duration-300 rounded-xl border-indigo-500 border-3 focus:border-8 hover:border-indigo-600 dark:bg-gray-700"
   />
 
   <a
@@ -26,8 +26,11 @@
     >&nbsp;&nbsp;Go&nbsp;&nbsp;</a
   >
 </div>
-
 <br />
-<p class="text-center text-3xl">
-  Create your own session <a href="/session/create" class="underline">here</a>
-</p>
+
+<a
+  href="/session/create"
+  class="text-center text-2xl p-4 bg-gradient-to-r rounded-xl from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 hover:scale-110 text-white  "
+>
+  Create your own session
+</a>
