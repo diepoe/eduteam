@@ -62,3 +62,5 @@
 {:catch error}
   <p>Error: {error}</p>
 {/await}
+
+<div class="grid grid-cols-3">fgh</div>
