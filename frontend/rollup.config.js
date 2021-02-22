@@ -59,7 +59,12 @@ export default {
   },
   plugins: [
     replace({
-      "process.env.API_URL": JSON.stringify(process.env.API_URL),
+      process: JSON.stringify({
+        env: {
+          production: production,
+          ...config().parsed,
+        },
+      }),
     }),
     alias({ entries: [{ find: "@", replacement: "./src" }] }),
     svelte({

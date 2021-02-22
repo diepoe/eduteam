@@ -1,21 +1,20 @@
 <script>
   import "@github/markdown-toolbar-element";
   import Icon from "@/components/icons/Icon.svelte";
-  import { mutation } from "svelte-apollo";
-  import { gql } from "apollo-boost";
+  import { mutation } from "@urql/svelte";
 
-  const ADDCONTRIBUTION = gql`
+  let author = "";
+  let content = "";
+
+  const addContribution = mutation({query: `
     mutation($author: String!, $content: String!) {
       addContribution(description: $author, content: $content) {
         content
         author
       }
     }
-  `;
-  const addContribution = mutation(ADDCONTRIBUTION);
-
-  let author = "";
-  let content = "";
+  `});
+  
   async function handleSubmit() {
     console.log("Submitted");
     try {

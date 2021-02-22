@@ -1,11 +1,10 @@
 <script>
-  import { getClient, query } from "svelte-apollo";
-  import { gql } from "apollo-boost";
-
+  import { operationStore, query } from "@urql/svelte";
   import { params } from "@roxi/routify";
-  import Icon from "../icons/Icon.svelte";
+  import Icon from "@/components/icons/Icon.svelte";
 
-  const GETSESSION = gql`
+  const code = $params.code;
+  const GETSESSION = operationStore(`
     query($code: String!) {
       getSession(code: $code) {
         id
@@ -13,9 +12,8 @@
         description
       }
     }
-  `;
-  const code = $params.code;
-  const client = getClient();
+  `);
+  
   const sessions = query(GETSESSION, { variables: { code } });
 </script>
 

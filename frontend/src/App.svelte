@@ -1,15 +1,11 @@
 <script>
   import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
+  import { initClient } from "@urql/svelte";
 
-  import ApolloClient from "apollo-boost";
-  import { setClient } from "svelte-apollo";
-
-  const client = new ApolloClient({
-    uri: process.env.API_URL || "http://localhost:4000/graphql",
+  initClient({
+    url: process.env.API_URL || "http://localhost:8080",
   });
-  setClient(client);
-  console.log(process.env.API_URL);
 </script>
 
 <Router {routes} />

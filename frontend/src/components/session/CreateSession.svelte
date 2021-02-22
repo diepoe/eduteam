@@ -1,11 +1,11 @@
 <script>
   import { url } from "@roxi/routify";
-  import { mutation } from "svelte-apollo";
-  import { gql } from "apollo-boost";
+  import { mutation } from "@urql/svelte";
 
   import QrCode from "svelte-qrcode";
 
-  const ADDSESSION = gql`
+  const addSession = mutation({
+    query: `
     mutation($description: String!, $randStr: String!) {
       addSession(description: $description, code: $randStr) {
         id
@@ -13,8 +13,8 @@
         description
       }
     }
-  `;
-  const addSession = mutation(ADDSESSION);
+  `,
+  });
 
   let description = "";
   let showResult = false;
@@ -25,7 +25,7 @@
       const randStr = Math.random().toString(20).substr(2, 6);
       showResult = true;
 
-      return await addSession({ variables: { description, randStr } });
+      addSession({ variables: { description, randStr } });
     } catch (error) {
       console.log(error);
     }
