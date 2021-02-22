@@ -20,12 +20,12 @@ First you have to clone the project
 git clone https://github.com/HAUDRAUFHAUN/eduteam/
 cd eduteam
 ```
-If you want to run the entire project including database, GraphQL-Api and Svelte frontend run:
+To run the backend (Dgraph database) run this command:
 ```bash
-docker-compose -f docker-compose.debug.yml up --build
+docker-compose -f backend.debug.yml up --build -d
 ```
-If you only want to run the frontend run following command:
+To run the frontend run following command:
 ```bash
 cd frontend
-npm run dev
+npm run dev:ssr
 ```
