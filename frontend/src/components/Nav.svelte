@@ -63,6 +63,7 @@
           <button
             class="right-0 absolute p-1 rounded-lg  text-gray-50 hover:bg-gray-100 hover:text-gray-900 fill-current"
             on:click={() => setTheme()}
+            aria-label="change theme"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +105,8 @@
             <button
               on:click={() => (hide = "false")}
               class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center text-gray-400 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-            >
+              aria-label="toggle mobile menu"
+              >
               <svg
                 class="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +139,8 @@
                 type="button"
                 on:click={() => (hide = "true")}
                 class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-red-500 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-              >
+                aria-label="close mobile menu"
+                >
                 <span class="sr-only">Close main menu</span>
                 <!-- Heroicon name: x -->
                 <svg
