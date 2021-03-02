@@ -4,10 +4,8 @@
   import { initClient } from "@urql/svelte";
 
   initClient({
-    url: process.env.API_URL || "http:localhost:8080"
+    url: process.env.API_URL || "http:localhost:8080",
   });
-
-  console.log(process.env.API_URL)
 </script>
 
 <Router {routes} />
