@@ -58,14 +58,6 @@ export default {
     chunkFileNames: `[name]${(production && "-[hash]") || ""}.js`,
   },
   plugins: [
-    replace({
-      process: JSON.stringify({
-        env: {
-          production: production,
-          ...config().parsed,
-        },
-      }),
-    }),
     alias({ entries: [{ find: "@", replacement: "./src" }] }),
     svelte({
       dev: !production, // run-time checks
@@ -107,6 +99,15 @@ export default {
       mode: "production",
     }),
     production && copyToDist(),
+    replace({
+      process: JSON.stringify({
+        env: {
+          production: production,
+          ...config().parsed,
+        },
+      }),
+      "process.env.API_URL": JSON.stringify(process.env.API_URL),
+    }),
   ],
   watch: {
     clearScreen: false,
