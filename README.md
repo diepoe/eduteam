@@ -11,20 +11,17 @@ Anyone can create a group and collaborate with others.
 
 ## developer setup
 To get this project up and running on your machine ensure that you have installed:
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-    - [docker-compose](https://docs.docker.com/compose/install/) (comes with docker desktop)
-- [Node Js](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/) for the backend
+- [Node Js](https://nodejs.org/en/) 
 
 First you have to clone the project
 ```bash
 git clone https://github.com/HAUDRAUFHAUN/eduteam/
 cd eduteam
 ```
-To run the backend (Dgraph database) run this command:
-```bash
-docker-compose -f backend.debug.yml up --build -d
-```
-To run the frontend run following command:
+To run the backend (KeystoneJS) read [this](https://github.com/HAUDRAUFHAUN/eduteam/blob/main/backend/README.md#running-the-project).
+
+To run the frontend run following commands:
 ```bash
 cd frontend
 npm run dev:ssr
