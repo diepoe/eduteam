@@ -1,70 +1,26 @@
-const express = require("express");
-const { ApolloServer, gql } = require("apollo-server-express");
-require("./config");
+const { Keystone } = require('@keystonejs/keystone');
+const { GraphQLApp } = require('@keystonejs/app-graphql');
+const { AdminUIApp } = require('@keystonejs/app-admin-ui');
 
-const { Contribution, Session } = require("./models");
+const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
+const PROJECT_NAME = 'backend';
+const adapterConfig = { mongoUri: 'mongodb://localhost/backend' };
 
-const typeDefs = gql`
-  type Contribution {
-    author: String!
-    content: String!
-    sessionID: String!
-  }
+const ContributionSchema = require('./lists/Contribution')
+const SessionSchema = require('./lists/Session')
 
-  type Session {
-    id: ID!
-    code: String!
-    description: String!
-    contributions: [Contribution]
-  }
-
-  type Query {
-    getSession(code: String!): Session!
-    getSessions: [Session!]
-    getContributions(sessionID: String!): [Contribution!]
-  }
-
-  type Mutation {
-    addSession(code: String!, description: String!): Session
-    addContribution(
-      author: String!
-      content: String!
-      sessionID: String
-    ): Contribution
-  }
-`;
-
-const resolvers = {
-  Query: {
-    getSession: async (_, args) =>
-      await Session.findOne({ code: args.code }).exec(),
-    getSessions: async () => await Session.find({}).exec(),
-    getContributions: async () => await Contribution.find({}).exec(),
-  },
-  Mutation: {
-    addSession: async (_, args) => {
-      try {
-        let response = await Session.create(args);
-        return response;
-      } catch (e) {
-        return e.message;
-      }
-    },
-    addContribution: async (_, args) => {
-      try {
-        let response = await Contribution.create(args);
-        return response;
-      } catch (e) {
-        return e.message;
-      }
-    },
-  },
-};
-
-const server = new ApolloServer({ typeDefs, resolvers });
-const app = express();
-server.applyMiddleware({ app });
-
-app.listen({ port: process.env.PORT || 4000 }, () => {
-  console.log(`🚀 Server is ready`);
+const keystone = new Keystone({
+  adapter: new Adapter(adapterConfig),
 });
+
+keystone.createList('Session', SessionSchema);
+
+keystone.createList('Contribution', ContributionSchema)
+
+module.exports = {
+  keystone,
+  apps: [
+    new GraphQLApp(),
+    new AdminUIApp({ name: PROJECT_NAME, enableDefaultRoute: true }),
+  ],
+};
