@@ -1,5 +1,5 @@
-const { Markdown } = require('@keystonejs/fields-markdown');
-const {Text} = require('@keystonejs/fields');
+const { Markdown } = require("@keystonejs/fields-markdown");
+const { Text, Relationship } = require("@keystonejs/fields");
 
 module.exports = {
   fields: {
@@ -8,11 +8,13 @@ module.exports = {
       isRequired: true,
     },
     content: {
-     type: Markdown 
+      type: Markdown,
     },
     session: {
-      type: Text,
+      type: Relationship,
+      ref: "Session",
+      many: false,
       isRequired: true,
-    }
+    },
   },
 };
