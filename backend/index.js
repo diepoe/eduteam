@@ -4,9 +4,13 @@ const { Text, Password } = require("@keystonejs/fields");
 const { PasswordAuthStrategy } = require("@keystonejs/auth-password");
 const { AdminUIApp } = require("@keystonejs/app-admin-ui");
 
+require("dotenv").config();
+
 const { MongooseAdapter: Adapter } = require("@keystonejs/adapter-mongoose");
 const PROJECT_NAME = "backend";
-const adapterConfig = { mongoUri: "mongodb://localhost/backend" };
+const adapterConfig = {
+  mongoUri: process.env.DB_URI || "mongodb://localhost/backend",
+};
 
 const ContributionSchema = require("./lists/Contribution");
 const SessionSchema = require("./lists/Session");
@@ -30,8 +34,8 @@ const authStrategy = keystone.createAuthStrategy({
   type: PasswordAuthStrategy,
   list: "User",
   config: {
-    identityField: "username", // default: 'email'
-    secretField: "password", // default: 'password'
+    identityField: "username",
+    secretField: "password",
   },
 });
 
