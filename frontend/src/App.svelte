@@ -4,7 +4,7 @@
   import { initClient } from "@urql/svelte";
 
   initClient({
-    url: process.env.API_URL || "http:localhost:8080",
+    url: process.env.API_URL || "http://localhost:3000/admin/api",
   });
 </script>
 

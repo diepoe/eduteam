@@ -14,7 +14,7 @@
   <input
     id="codeinput"
     type="text"
-    maxlength="6"
+    maxlength="40"
     bind:value={code}
     placeholder="Enter your code..."
     class="w-4/5 m-2 self-center duration-300 rounded-xl border-indigo-500 border-3 focus:border-8 hover:border-indigo-600 dark:bg-gray-700"

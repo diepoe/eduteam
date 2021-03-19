@@ -13,7 +13,7 @@ module.exports = {
       adminDoc: "This is a description of the session",
       isRequired: true,
     },
-    todoList: {
+    contributionList: {
       type: Relationship,
       ref: "Contribution",
       many: true,

@@ -4,15 +4,13 @@
 
   const code = $params.code;
   const session = operationStore(
-    `
-  query($code: String!){
-    getSession(code: $code) {
-    code
-    description
-  }
-}
-  `,
-    { code }
+    `{
+        allSessions {
+          id 
+          title
+          description
+    }
+  }`
   );
 
   query(session);

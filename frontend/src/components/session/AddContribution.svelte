@@ -10,7 +10,7 @@
   const addContribution = mutation({
     query: `
     mutation($author: String!, $content: String!) {
-      addContribution(description: $author, content: $content) {
+      createContribution(author: $author, content: $content) {
         content
         author
       }
