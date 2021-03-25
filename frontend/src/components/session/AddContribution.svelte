@@ -45,7 +45,7 @@
   <textarea
     bind:value={content}
     id="contribution-content"
-    class="rounded-md w-2/3 "
+    class="rounded-md w-2/3 dark:bg-gray-700"
     cols="30"
     rows="10"
   />

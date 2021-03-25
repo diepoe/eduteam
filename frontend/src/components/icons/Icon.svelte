@@ -3,6 +3,9 @@
   export let width = "24px";
   export let height = "24px";
 
+  export let color = "gray-900";
+  export let dark = "white";
+
   let icons = [
     {
       box: "24 24",
@@ -140,9 +143,13 @@
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  class="svgicon {name} dark:text-white"
+  class="svgicon stroke-current text-{color} dark:text-{dark}"
   {width}
   {height}
+  fill="none"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  stroke-width="2"
   viewBox="0 0 {displayIcon.box}">{@html displayIcon.svg}</svg
 >
 
@@ -151,122 +158,5 @@
     padding: 2px 20px;
     display: flex;
     justify-items: start;
-  }
-  svg.svgicon {
-    @apply h-5 w-5;
-  }
-
-  svg.blockquote {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-
-  svg.bold {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.circle-1 {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.code {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.header {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.image {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.italic {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.list {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.link {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.list-check {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.brand-github {
-    color: #181717;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.plus {
-    @apply text-gray-900;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.alert {
-    @apply text-red-600;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
-  }
-  svg.go.back {
-    @apply text-white;
-    stroke-width: 2;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
   }
 </style>
