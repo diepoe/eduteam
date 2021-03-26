@@ -19,5 +19,11 @@ module.exports = {
       many: true,
       adminDoc: "These are the contributions of the session",
     },
+    code: {
+      type: Text,
+      isRequired: true,
+      isUnique: true,
+      adminDoc: "Code of the session",
+    },
   },
 };
