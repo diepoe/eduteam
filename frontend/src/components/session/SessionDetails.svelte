@@ -4,13 +4,15 @@
 
   const code = $params.code;
   const session = operationStore(
-    `{
-        allSessions {
+    `query ($code: String){
+        allSessions(where: { code: $code }) {
           id 
+          code
           title
           description
     }
-  }`
+  }`,
+    { code }
   );
 
   query(session);
@@ -24,9 +26,8 @@
 {:else if $session.error}
   Oh no! {$session.error.message}
   {JSON.stringify($session)}
-{:else if !$session.data}
-  No data
-  {JSON.stringify($session)}
+{:else if !$session.data || $session.data.allSessions.length === 0}
+  No data // session not found
 {:else}
-  {JSON.stringify($session)}
+  {JSON.stringify($session.data.allSessions)}
 {/if}
