@@ -21,13 +21,15 @@
 
 <h2 class="text-2xl ">Session Details:</h2>
 <br />
-{#if $session.fetching}
-  Loading...
-{:else if $session.error}
-  Oh no! {$session.error.message}
-  {JSON.stringify($session)}
-{:else if !$session.data || $session.data.allSessions.length === 0}
-  No data // session not found
-{:else}
-  {JSON.stringify($session.data.allSessions)}
-{/if}
+<section class="mb-3 xl:mb-6">
+  {#if $session.fetching}
+    Loading...
+  {:else if $session.error}
+    Oh no! {$session.error.message}
+    {JSON.stringify($session)}
+  {:else if !$session.data || $session.data.allSessions.length === 0}
+    No data // session not found
+  {:else}
+    {JSON.stringify($session.data.allSessions)}
+  {/if}
+</section>

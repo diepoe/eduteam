@@ -7,31 +7,38 @@
 </script>
 
 <markdown-toolbar
-  class="place-content-center mt-4 mb-2 flex flex-row p-2 border-solid border-2 border-gry-900 rounded-md"
+  class="flex flex-row flex-wrap p-2 m-auto border-2 border-gray-900 border-solid rounded-md dark:border-gray-50 md:w-max place-content-center"
   for={target}
 >
-  <md-bold class="p-2 rounded hover:bg-gray-200"><Icon name="bold" /></md-bold>
-  <md-header class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="header" /></md-header
+  <md-bold class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="bold" color="gray-900" dark="white" /></md-bold
   >
-  <md-italic class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="italic" /></md-italic
+  <md-header class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="header" color="gray-900" dark="white" /></md-header
   >
-  <md-quote class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="blockquote" /></md-quote
+  <md-italic class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="italic" color="gray-900" dark="white" /></md-italic
   >
-  <md-code class="p-2 rounded hover:bg-gray-200"><Icon name="code" /></md-code>
-  <md-link class="p-2 rounded hover:bg-gray-200"><Icon name="link" /></md-link>
-  <md-image class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="image" /></md-image
+  <md-quote class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="blockquote" color="gray-900" dark="white" /></md-quote
   >
-  <md-unordered-list class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="list" /></md-unordered-list
+  <md-code class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="code" color="gray-900" dark="white" /></md-code
   >
-  <md-ordered-list class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="circle-1" /></md-ordered-list
+  <md-link class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="link" color="gray-900" dark="white" /></md-link
   >
-  <md-task-list class="p-2 rounded hover:bg-gray-200"
-    ><Icon name="list-check" /></md-task-list
+  <md-image class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="image" color="gray-900" dark="white" /></md-image
+  >
+  <md-unordered-list
+    class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="list" color="gray-900" dark="white" /></md-unordered-list
+  >
+  <md-ordered-list class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="circle-1" color="gray-900" dark="white" /></md-ordered-list
+  >
+  <md-task-list class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+    ><Icon name="list-check" color="gray-900" dark="white" /></md-task-list
   >
 </markdown-toolbar>

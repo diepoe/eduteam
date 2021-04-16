@@ -28,11 +28,11 @@
   ];
 </script>
 
-<div class=" max-w-full mx-auto focus-within ">
+<div class="max-w-full mx-auto focus-within">
   <div
     class="relative z-10 pb-2 bg-indigo-500 sm:py-4 md:py-6 lg:max-w-full lg:w-full "
   >
-    <div class="relative pt-2 px-4 sm:px-6 lg:px-8">
+    <div class="relative px-4 pt-2 sm:px-6 lg:px-8">
       <nav
         class="relative flex items-center justify-between sm:h-10 lg:justify-start lg:w-full"
         aria-label="Global"
@@ -44,7 +44,7 @@
                 rel={item.rel}
                 target={item.target}
                 href={item.link}
-                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-2 rounded-md"
+                class="flex flex-row p-2 font-medium text-white rounded-md hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white"
               >
                 <span class="icon-wrapper"
                   ><Icon name="brand-github" />{item.name}</span
@@ -55,13 +55,13 @@
                 rel={item.rel}
                 target={item.target}
                 href={item.link}
-                class="flex flex-row font-medium text-white hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white p-2 rounded-md"
+                class="flex flex-row p-2 font-medium text-white rounded-md hover:text-indigo-800 hover:bg-indigo-300 dark:text-white dark:hover:text-white"
                 >{item.name}</a
               >
             {/if}
           {/each}
           <button
-            class="right-0 absolute p-1 rounded-lg  text-gray-50 hover:bg-gray-100 hover:text-gray-900 fill-current"
+            class="absolute right-0 p-1 rounded-lg fill-current text-gray-50 hover:bg-gray-100 hover:text-gray-900 focus:outline-none"
             on:click={() => setTheme()}
             aria-label="change theme"
           >
@@ -98,17 +98,17 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-    <div class="md:hidden right-0">
+    <div class="right-0 md:hidden">
       <div class:hidden={hide === "false"}>
-        <div class="px-4 flex items-center justify-between">
+        <div class="flex items-center justify-between px-4">
           <div class="-m3-2">
             <button
               on:click={() => (hide = "false")}
-              class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center text-gray-400 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              class="inline-flex items-center p-2 text-gray-400 bg-white rounded-md focus:outline-none dark:bg-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
               aria-label="toggle mobile menu"
-              >
+            >
               <svg
-                class="h-6 w-6"
+                class="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -128,23 +128,23 @@
     </div>
     <div class:hidden={hide === "true"}>
       <div
-        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
       >
         <div
-          class="rounded-lg shadow-md bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden"
+          class="overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 ring-1 ring-black ring-opacity-5"
         >
-          <div class="px-5 pt-4 flex items-center justify-between">
+          <div class="flex items-center justify-between px-5 pt-4">
             <div class="-mr-2">
               <button
                 type="button"
                 on:click={() => (hide = "true")}
-                class="bg-white dark:bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-red-500 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                class="inline-flex items-center justify-center p-2 text-red-500 bg-white rounded-md focus:outline-none dark:bg-gray-800 dark:text-red-300 hover:text-red-700 hover:bg-gray-100 focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                 aria-label="close mobile menu"
-                >
+              >
                 <span class="sr-only">Close main menu</span>
                 <!-- Heroicon name: x -->
                 <svg
-                  class="h-6 w-6"
+                  class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -170,7 +170,7 @@
               {#each menuItems as item}
                 <a
                   href={item.link}
-                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600"
+                  class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50 dark:text-white dark:bg-gray-800 dark:hover:bg-gray-600"
                   role="menuitem">{item.name}</a
                 >
               {/each}
